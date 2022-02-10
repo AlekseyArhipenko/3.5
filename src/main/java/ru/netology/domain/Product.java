@@ -7,7 +7,8 @@ public class Product {
     private String name;
     private int price;
 
-    public Product() {}
+    public Product() {
+    }
 
     public Product(int id, String name, int price) {
         this.id = id;
@@ -44,9 +45,7 @@ public class Product {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Product product = (Product) o;
-        return id == product.id &&
-                price == product.price &&
-                Objects.equals(name, product.name);
+        return id == product.id && price == product.price && Objects.equals(name, product.name);
     }
 
     @Override
@@ -54,12 +53,5 @@ public class Product {
         return Objects.hash(id, name, price);
     }
 
-    @Override
-    public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", price=" + price +
-                '}';
-    }
+
 }
